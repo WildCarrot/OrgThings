@@ -32,7 +32,7 @@ file.  For example:
     (add-to-list 'load-path (expand-file-name "~/OrgThings"))
     (load-library "org-things.el")
 
-Modify
+Modify the paths in setup.sh and org-things.el to your liking.
 
 Quick Reference
 ---------------
