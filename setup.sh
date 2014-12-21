@@ -1,13 +1,15 @@
 #!/bin/bash
 #
 # Setup the directories for OrgThings under the current directory.
+# The path here and in org-things.el must match.
 #
 
-mkdir -p OrgThings/Projects
-mkdir -p OrgThings/Someday
-mkdir -p OrgThings/Logbook
+mkdir -p OrgThingsData/Projects
+mkdir -p OrgThingsData/Someday
+mkdir -p OrgThingsData/Logbook
 
-touch OrgThings/Inbox.org
-touch OrgThings/Logbook/Inbox.org
+touch OrgThingsData/Inbox.org
+touch OrgThingsData/Someday/Inbox.org
+touch OrgThingsData/Logbook/Inbox.org
 
-echo "#+ARCHIVE: Logbook/Inbox.org::" > OrgThings/Inbox.org
+echo "#+ARCHIVE: Logbook/Inbox.org::" > OrgThingsData/Inbox.org

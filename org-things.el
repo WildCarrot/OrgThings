@@ -1,7 +1,10 @@
 ; Org-mode settings for OrgThings in emacs.
-					;
-; CHANGE ME: Location of the OrgThings root.
-(setq orgthings-path (expand-file-name "~/OrgThings/OrgThings"))
+; (https://github.com/WildCarrot/OrgThings)
+
+; CHANGE ME: Location of the OrgThings root where the ToDo files are stored.
+; This is probably NOT the same directory as where the org-things.el file
+; is stored.
+(setq orgthings-path (expand-file-name "~/OrgThingsData"))
 
 ; Inbox for capturing new items.
 (setq org-default-notes-file (expand-file-name (concat orgthings-path "/Inbox.org")))
@@ -10,6 +13,8 @@
 ; Does not include "Someday" or "Logbook" on purpose.
 (setq org-agenda-files (list (expand-file-name orgthings-path)
 			     (expand-file-name (concat orgthings-path "/Projects"))))
+
+(setq org-archive-location "::* Logbook")
 
 ; Define global access to saving to the Inbox.
 (global-set-key "\C-cc" 'org-capture)
